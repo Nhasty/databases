@@ -17,12 +17,10 @@ CREATE TABLE rooms (
 CREATE TABLE messages (
   /* Describe your table here.*/
   id INTEGER AUTO_INCREMENT,
-  message_text VARCHAR(140) NOT NULL,
-  users_id INTEGER,
-  rooms_id INTEGER,
-  PRIMARY KEY (id),
-  FOREIGN KEY (users_id) REFERENCES users(id),
-  FOREIGN KEY (rooms_id) REFERENCES rooms(id)
+  username VARCHAR(50) NOT NULL,
+  messageText VARCHAR(140) NOT NULL,
+  roomname VARCHAR(30) NOT NULL,
+  PRIMARY KEY (id)
 );
 
 
