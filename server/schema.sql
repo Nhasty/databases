@@ -2,6 +2,18 @@ CREATE DATABASE chat;
 
 USE chat;
 
+CREATE TABLE users (
+  id INTEGER AUTO_INCREMENT,
+  username VARCHAR(50) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE rooms (
+  id INTEGER AUTO_INCREMENT,
+  roomname VARCHAR(30) NOT NULL,
+  PRIMARY KEY (id)
+);
+
 CREATE TABLE messages (
   /* Describe your table here.*/
   id INTEGER AUTO_INCREMENT,
@@ -13,11 +25,7 @@ CREATE TABLE messages (
   FOREIGN KEY (rooms_id) REFERENCES rooms(id)
 );
 
-CREATE TABLE users (
-  id INTEGER AUTO_INCREMENT,
-  username VARCHAR(50) NOT NULL,
-  PRIMARY KEY (id)
-);
+
 
 CREATE TABLE friends (
   id INTEGER AUTO_INCREMENT,
@@ -29,11 +37,7 @@ CREATE TABLE friends (
 );
 /* Create other tables and define schemas for them here! */
 
-CREATE TABLE rooms (
-  id INTEGER AUTO_INCREMENT,
-  roomname VARCHAR(30) NOT NULL,
-  PRIMARY KEY (id)
-);
+
 
 
 /*  Execute this file from the command line by typing:
